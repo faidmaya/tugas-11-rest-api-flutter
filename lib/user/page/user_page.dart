@@ -19,7 +19,7 @@ class _UserPageState extends State<UserPage> {
     getData();
   }
 
-  getData() async {
+  Future<void> getData() async {
     users = await UserService().fetchUser();
     setState(() {});
   }

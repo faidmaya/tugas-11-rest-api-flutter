@@ -21,7 +21,7 @@ class _UserDetailPageState extends State<UserDetailPage> {
     getDetail();
   }
 
-  getDetail() async {
+  Future<void> getDetail() async {
     user = await UserService().fetchUserDetail(widget.userId);
     setState(() {
       isLoading = false;
